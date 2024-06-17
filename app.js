@@ -12,7 +12,7 @@ function extractIdFromUrl(url) {
 app.get("/get-match-details", async (req, res) => {
   try {
     const flashscoreUrl = req.query.url;
-    const browser = await puppeteer.launch({ headless: true });
+    const browser = await puppeteer.launch({ headless: false });
     const page = await browser.newPage();
     await page.goto(flashscoreUrl);
 
